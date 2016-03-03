@@ -1,6 +1,5 @@
 {
   "name": "react-material-dashboard",
-  "private": true,
   "version": "0.0.1",
   "description": "Material design admin dashboard powered with React",
   "main": "",
