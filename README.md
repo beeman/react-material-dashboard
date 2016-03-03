@@ -51,10 +51,6 @@ Clean up the dist directory:
     
     $ npm run clean
 
-Just copy the static assets:
-    
-    $ npm run copy
-
 ## Project structure and credits
 
 Project structure based on yeoman [generator](https://github.com/newtriks/generator-react-webpack).
