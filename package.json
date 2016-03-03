@@ -20,7 +20,10 @@
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "deploy": "gh-pages-deploy"
   },
-  "repository": "",
+  "gh-pages-deploy": {
+    "staticpath": "dist"
+  },
+  "repository": "https://github.com/micrum/react-material-dashboard",
   "keywords": [
     "react",
     "material",

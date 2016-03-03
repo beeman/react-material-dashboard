@@ -2,6 +2,8 @@
 
 Material Design admin dashboard powered with React
 
+Check out [DEMO](http://micrum.github.io/react-material-dashboard)
+
 ## Main features
 
 * Powered with React
