@@ -1,22 +1,15 @@
 require('normalize.css');
-require('styles/App.css');
+require('styles/App.scss');
 
 import React from 'react';
 
-let yeomanImage = require('../images/yeoman.png');
+import AppBar from 'material-ui/lib/app-bar';
 
-class AppComponent extends React.Component {
-  render() {
-    return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
-    );
-  }
-}
+const AppBarExampleIcon = () => (
+  <AppBar
+    title="React Material Dashboard"
+    iconClassNameRight="muidocs-icon-navigation-expand-more"
+  />
+);
 
-AppComponent.defaultProps = {
-};
-
-export default AppComponent;
+export default AppBarExampleIcon;
