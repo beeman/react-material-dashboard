@@ -21,7 +21,10 @@
   "gh-pages-deploy": {
     "staticpath": "dist"
   },
-  "repository": "https://github.com/micrum/react-material-dashboard",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/micrum/react-material-dashboard"
+  },
   "keywords": [
     "react",
     "material",
@@ -78,6 +81,7 @@
     "material-ui": "^0.15.0-alpha.1",
     "normalize.css": "^3.0.3",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "react-tap-event-plugin": "^0.2.2"
   }
 }

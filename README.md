@@ -42,6 +42,10 @@ Just build the dist version and copy static files:
 Run unit tests:
 
     $npm test
+    
+Deploy to gh-pages:
+
+    $npm run deploy
 
 Lint all files in src (also automatically done AFTER tests are run):
 
