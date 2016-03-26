@@ -1,10 +1,30 @@
 import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/Main';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Table from './components/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import { Router, hashHistory } from 'react-router';
 
 injectTapEventPlugin();
 
-// Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+    <Layout />,
+  document.getElementById('app')
+);
+
+const routes = {
+  path: '/',
+  component: Layout,
+  indexRoute: { component: Home },
+  childRoutes: [
+    { path: 'home', component: Home },
+    { path: 'table', component: Table }
+  ]
+};
+
+ReactDOM.render(
+  <Router history={hashHistory} routes={routes} />,
+  document.getElementById('app')
+);

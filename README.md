@@ -13,6 +13,7 @@ Check out [DEMO](http://micrum.github.io/react-material-dashboard)
 * Transforming styles with Postcss
 * Material-UI components
 * Set of npm scripts
+* Routing with react-router
 
 ## Getting started
 

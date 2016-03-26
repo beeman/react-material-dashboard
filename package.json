@@ -22,8 +22,8 @@
     "staticpath": "dist"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/micrum/react-material-dashboard"
+    "type": "git",
+    "url": "https://github.com/micrum/react-material-dashboard"
   },
   "keywords": [
     "react",
@@ -82,6 +82,7 @@
     "normalize.css": "^3.0.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
+    "react-router": "^2.0.1",
     "react-tap-event-plugin": "^0.2.2"
   }
 }

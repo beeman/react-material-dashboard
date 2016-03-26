@@ -5,37 +5,42 @@ import React from 'react';
 import AppBar from 'material-ui/lib/app-bar';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import { Link } from 'react-router';
 
-
-class Main extends React.Component {
+class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {open: false};
-    this.showNavigation = this.showNavigation.bind(this);
+    this.toggleNavigation = this.toggleNavigation.bind(this);
   }
 
-  showNavigation() {
-    this.setState({open: true});
+  toggleNavigation() {
+    this.setState({open: !this.state.open});
   }
 
   render() {
     return (
-      <div>
+      <div id="main">
         <AppBar
           title="React Material Dashboard"
-          onLeftIconButtonTouchTap={this.showNavigation}
+          onLeftIconButtonTouchTap={this.toggleNavigation}
         />
         <LeftNav
           open={this.state.open}
           docked={false}
           onRequestChange={(open) => this.setState({open})}
         >
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+          <Link to="/home" onTouchTap={this.toggleNavigation}>
+            <MenuItem>Home</MenuItem>
+          </Link>
+          <Link to="/table" onTouchTap={this.toggleNavigation}>
+            <MenuItem>Table</MenuItem>
+          </Link>
         </LeftNav>
+        {this.props.children}
       </div>
     );
   }
 }
 
-export default Main;
+export default Layout;
