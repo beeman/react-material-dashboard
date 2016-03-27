@@ -48,10 +48,6 @@ Deploy to gh-pages:
 
     $npm run deploy
 
-Lint all files in src (also automatically done AFTER tests are run):
-
-    $ npm run lint
-
 Clean up the dist directory:
     
     $ npm run clean
