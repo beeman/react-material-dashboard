@@ -5,7 +5,8 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Table from './components/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { Router, browserHistory } from 'react-router';
+import { Router, useRouterHistory } from 'react-router';
+import {createHashHistory} from 'history';
 
 injectTapEventPlugin();
 
@@ -25,6 +26,6 @@ const routes = {
 };
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes} />,
+  <Router history={useRouterHistory(createHashHistory)({queryKey: false})} routes={routes} />,
   document.getElementById('app')
 );
