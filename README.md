@@ -43,14 +43,6 @@ Just build the dist version and copy static files:
 Run unit tests:
 
     $npm test
-    
-Deploy to gh-pages:
-
-    $npm run deploy
-
-Clean up the dist directory:
-    
-    $ npm run clean
 
 ## Project structure and credits
 
