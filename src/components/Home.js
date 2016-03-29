@@ -15,10 +15,12 @@ class Home extends React.Component {
           />
           <Widget
             heading="Expandable Widget"
+            content={<p>Content goes here</p>}
           />
           <Widget
             heading="Chart Widget"
             lastChild={true}
+            content={<p>Content goes here</p>}
           />
         </FullWidthSection>
       </div>
