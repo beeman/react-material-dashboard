@@ -11,7 +11,7 @@ import IconButton from 'material-ui/lib/icon-button';
 const githubButton = (
   <IconButton
     iconClassName="material-icons"
-    href="https://github.com/micrum/react-material-dashboard"
+    href="https://github.com/lambdacdm/react-material-dashboard"
     linkButton={true}>
     code
   </IconButton>
