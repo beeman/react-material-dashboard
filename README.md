@@ -2,7 +2,7 @@
 
 Material Design admin dashboard powered with React
 
-Check out [DEMO](http://micrum.github.io/react-material-dashboard)
+Check out [DEMO](http://lambdacdm.github.io/react-material-dashboard)
 
 ## Main features
 
@@ -20,7 +20,7 @@ Check out [DEMO](http://micrum.github.io/react-material-dashboard)
 
 Clone project:
 
-    $ git clone https://github.com/micrum/react-material-dashboard.git
+    $ git clone https://github.com/lambdaCDM/react-material-dashboard.git
     
 Install dependencies:
     
