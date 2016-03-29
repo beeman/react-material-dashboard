@@ -7,6 +7,7 @@ Check out [DEMO](http://micrum.github.io/react-material-dashboard)
 ## Main features
 
 * Powered with React
+* Custom components
 * Assets bundling with Webpack
 * ES6 via Babel-Loader
 * SCSS styles

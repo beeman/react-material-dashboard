@@ -3,7 +3,9 @@ import React from 'react';
 class Table extends React.Component {
   render() {
     return (
-      <h1>Table</h1>
+      <div>
+        <h1 className="page-title">Table</h1>
+      </div>
     );
   }
 }

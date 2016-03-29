@@ -3,6 +3,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
 }
 
 .nav-link {
@@ -11,4 +12,9 @@ body {
 
 .page-content {
   padding: 20px 40px;
+}
+
+.page-title {
+  max-width: 1200px;
+  margin: 20px auto;
 }

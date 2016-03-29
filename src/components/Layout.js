@@ -29,6 +29,10 @@ class Layout extends React.Component {
   }
 
   render() {
+    var navTitleStyle = {
+      marginLeft: '-8px'
+    };
+
     return (
       <div id="main">
         <AppBar
@@ -41,6 +45,11 @@ class Layout extends React.Component {
           docked={false}
           onRequestChange={(open) => this.setState({open})}
         >
+          <AppBar
+            title="RMD"
+            showMenuIconButton={false}
+            titleStyle={navTitleStyle}
+          />
           <Link to="/home" onTouchTap={this.toggleNavigation} className="nav-link">
             <MenuItem>Home</MenuItem>
           </Link>
