@@ -20,7 +20,7 @@ Check out [DEMO](http://lambdacdm.github.io/react-material-dashboard)
 
 Clone project:
 
-    $ git clone https://github.com/lambdaCDM/react-material-dashboard.git
+    $ git clone https://github.com/lambda-cdm/react-material-dashboard.git
     
 Install dependencies:
     
