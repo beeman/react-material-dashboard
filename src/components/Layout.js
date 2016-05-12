@@ -2,11 +2,12 @@ require('normalize.css');
 require('styles/App.scss');
 
 import React from 'react';
-import AppBar from 'material-ui/lib/app-bar';
-import LeftNav from 'material-ui/lib/left-nav';
-import MenuItem from 'material-ui/lib/menus/menu-item';
+import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router';
-import IconButton from 'material-ui/lib/icon-button';
+import IconButton from 'material-ui/IconButton';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 const githubButton = (
   <IconButton
@@ -22,6 +23,18 @@ class Layout extends React.Component {
     super(props);
     this.state = {open: false};
     this.toggleNavigation = this.toggleNavigation.bind(this);
+  }
+
+  getChildContext() {
+    return {
+      muiTheme: this.state.muiTheme
+    };
+  }
+
+  componentWillMount() {
+    this.setState({
+      muiTheme: getMuiTheme()
+    });
   }
 
   toggleNavigation() {
@@ -40,7 +53,7 @@ class Layout extends React.Component {
           onLeftIconButtonTouchTap={this.toggleNavigation}
           iconElementRight={githubButton}
         />
-        <LeftNav
+        <Drawer
           open={this.state.open}
           docked={false}
           onRequestChange={(open) => this.setState({open})}
@@ -56,7 +69,7 @@ class Layout extends React.Component {
           <Link to="/table" onTouchTap={this.toggleNavigation} className="nav-link">
             <MenuItem>Table</MenuItem>
           </Link>
-        </LeftNav>
+        </Drawer>
         <div className="page-content">
           {this.props.children}
         </div>
@@ -64,5 +77,9 @@ class Layout extends React.Component {
     );
   }
 }
+
+Layout.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired
+};
 
 export default Layout;

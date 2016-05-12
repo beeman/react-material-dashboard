@@ -1,7 +1,6 @@
 import React from 'react';
-import ClearFix from 'material-ui/lib/clearfix';
-import spacing from 'material-ui/lib/styles/spacing';
-import styleResizable from 'material-ui/lib/mixins/style-resizable';
+import ClearFix from 'material-ui/internal/ClearFix';
+import spacing from 'material-ui/styles/spacing';
 const desktopGutter = spacing.desktopGutter;
 
 const FullWidthSection = React.createClass({
@@ -13,10 +12,6 @@ const FullWidthSection = React.createClass({
     style: React.PropTypes.object,
     useContent: React.PropTypes.bool
   },
-
-  mixins: [
-    styleResizable
-  ],
 
   getDefaultProps() {
     return {

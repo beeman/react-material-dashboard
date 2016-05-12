@@ -1,10 +1,10 @@
 import React from 'react';
-import styleResizable from 'material-ui/lib/mixins/style-resizable';
-import spacing from 'material-ui/lib/styles/spacing';
-import transitions from 'material-ui/lib/styles/transitions';
-import typography from 'material-ui/lib/styles/typography';
-import {grey400} from 'material-ui/lib/styles/colors';
-import Paper from 'material-ui/lib/paper';
+import spacing from 'material-ui/styles/spacing';
+import transitions from 'material-ui/styles/transitions';
+import typography from 'material-ui/styles/typography';
+import { grey400 } from 'material-ui/styles/colors';
+import Paper from 'material-ui/Paper';
+import withWidth, { MEDIUM, LARGE } from 'material-ui/utils/withWidth'
 
 const Widget = React.createClass({
 
@@ -12,10 +12,9 @@ const Widget = React.createClass({
     firstChild: React.PropTypes.bool,
     heading: React.PropTypes.string,
     lastChild: React.PropTypes.bool,
-    content: React.PropTypes.node
+    content: React.PropTypes.node,
+    width: React.PropTypes.number.isRequired
   },
-
-  mixins: [styleResizable],
 
   getDefaultProps() {
     return {
@@ -73,8 +72,7 @@ const Widget = React.createClass({
       }
     };
 
-    if (this.isDeviceSize(styleResizable.statics.Sizes.MEDIUM) ||
-      this.isDeviceSize(styleResizable.statics.Sizes.LARGE)) {
+    if (this.props.width === MEDIUM || this.props.width === LARGE) {
       styles.root = Object.assign(
         styles.root,
         styles.rootWhenMedium,
@@ -119,4 +117,4 @@ const Widget = React.createClass({
 
 });
 
-export default Widget;
+export default withWidth()(Widget);
